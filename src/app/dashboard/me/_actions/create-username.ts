@@ -4,7 +4,6 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { createSlug } from "@/utils/create-slug";
-import { error } from "console";
 
 const createUsernameSchema = z.object({
   username: z
