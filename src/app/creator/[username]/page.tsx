@@ -3,10 +3,9 @@ import Image from "next/image";
 export default async function Apoia({
   params,
 }: {
-  params: Promise<{ username: string }>
+  params: Promise<{ username: string }>;
 }) {
   const { username } = await params;
-
 
   console.log(username);
 
@@ -41,24 +40,16 @@ export default async function Apoia({
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full mx-auto gap-4 max-w-5xl">
         <section className="hidden md:flex flex-col bg-gray-50 p-5 rounded-md h-fit mx-2">
-          <p className="font-semibold text-lg">
-            Sobre Fulano Dev
-          </p>
+          <p className="font-semibold text-lg">Sobre Fulano Dev</p>
           <p className="text-gray-500 mt-2">
             Descrição generica sobre o fulano dev
           </p>
         </section>
 
-        <section
-          className="bg-gray-50 rounded-md p-5 h-fit mx-2"
-        >
-          <h3 className="font-semibold text-lg">
-            Apoie o Matheus Fraga:
-          </h3>
-
-
+        <section className="bg-gray-50 rounded-md p-5 h-fit mx-2">
+          <h3 className="font-semibold text-lg">Apoie o Matheus Fraga:</h3>
         </section>
       </div>
     </div>
-  )
+  );
 }
