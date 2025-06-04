@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { UrlPreview } from "./_components/url";
+import { ProfileCard } from "./_components/profile-card";
 
 export default async function Me() {
   const session = await auth();
@@ -20,6 +21,7 @@ export default async function Me() {
       <section className="w-full flex lg:flex-row flex-col lg:items-center mx-auto bg-zinc-900 rounded-md p-4 gap-2">
         <UrlPreview username={userData.username} />
       </section>
+      <ProfileCard user={userData} />
     </main>
   );
 }
